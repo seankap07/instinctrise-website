@@ -1,13 +1,18 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
-const inter = Inter({ subsets: ['latin'] });
+import Navbar from '@/components/Navbar';
 
-export const metadata = { title: 'InstinctRise', description: 'Enterprise AI Platform' };
+export const metadata = {
+  title: 'InstinctRise | TerritoryIQ',
+  description: 'Stop chasing leads. Own the territory. Exclusive territory intelligence for home service operators.',
+};
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="min-h-screen bg-black text-white antialiased">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
