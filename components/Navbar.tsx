@@ -6,7 +6,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-gray-800 bg-black/70 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <Logo className="h-9 w-9" />
+          <Logo className="h-12 w-12" />
           <div className="leading-tight">
             <div className="text-sm font-black tracking-wide">INSTINCTRISE</div>
             <div className="text-xs text-gray-400 -mt-0.5">TerritoryIQ</div>
