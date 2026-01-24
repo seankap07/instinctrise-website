@@ -1,201 +1,163 @@
-import BrainLogo from '../components/BrainLogo';
+'use client';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+    <main className="relative overflow-hidden">
+      {/* Background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
+        <div className="absolute inset-0 opacity-25 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_60%,transparent_110%)] bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        <div className="absolute -top-24 left-1/2 h-96 w-[50rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 blur-3xl" />
+      </div>
+
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-20"></div>
-
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <div className="flex justify-center mb-8">
-            <BrainLogo className="w-24 h-24 md:w-32 md:h-32" />
-          </div>
-
-          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-            INSTINCT RISE
-          </h1>
-
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-300 mb-8">
-            Territory IQ
-          </h2>
-
-          <p className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-            Own your market before<br />
-            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-              your competitors do.
+      <section className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
+        <div className="text-center">
+          <h1 className="text-5xl md:text-7xl font-black leading-tight">
+            Stop Chasing Leads.
+            <br />
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Own the Territory.
             </span>
+          </h1>
+          <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Exclusive territory intelligence for home service contractors. One client per ZIP code or city, per industry. No competition.
           </p>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto font-light">
-            We don't sell leads. We assign territory.
-          </p>
-
-          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-            One contractor per industry. One buyer per territory. No overlap. No dilution. No race to the bottom.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a
-              href="mailto:skaplan@instinctrise.com?subject=Claim My Territory"
-              className="group px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg text-xl font-bold hover:from-blue-500 hover:to-purple-500 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 w-full sm:w-auto"
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/request-territory"
+              className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-lg font-bold hover:from-blue-500 hover:to-purple-500 transition-all"
             >
-              CLAIM YOUR TERRITORY →
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* The Problem Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-red-950/20 to-black border-t border-gray-800">
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-4xl md:text-5xl font-black mb-8 text-center">
-            THE PROBLEM: <span className="text-red-400">THE LEAD-GEN TRAP</span>
-          </h3>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-6 leading-relaxed">
-            Most companies fight for scraps on Google and Angi. Every time you buy a lead, three of your competitors are buying the exact same name. You're forced into a price war before you even pick up the phone.
-          </p>
-
-          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-            <span className="text-blue-400 font-semibold">Territory IQ ends the war.</span> While everyone else is fighting in the digital clouds, you're owning the ground. We provide the map; you provide the trucks.
-          </p>
-        </div>
-      </section>
-
-      {/* The Solution Section */}
-      <section className="py-20 px-6 border-t border-gray-800">
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-4xl md:text-5xl font-black mb-8 text-center">
-            THE SOLUTION: <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">MARKET INTELLIGENCE</span>
-          </h3>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 text-center">
-            Stop guessing. Start collecting. Every city has thousands of addresses, but only a few hundred are ready to buy right now. Territory IQ identifies the "Replacement Windows"—the exact properties where assets are aging and budgets are ready.
-          </p>
-
-          <h4 className="text-2xl md:text-3xl font-bold mb-8 text-center text-blue-400">
-            What you get every month:
-          </h4>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-              <h5 className="text-xl font-bold mb-3 text-purple-400">Exclusive Market Control</h5>
-              <p className="text-gray-300">
-                Once you lock a territory, it is off the market for your industry. Period.
-              </p>
-            </div>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-              <h5 className="text-xl font-bold mb-3 text-purple-400">Rep-Ready Target Lists</h5>
-              <p className="text-gray-300">
-                No "cold" calling. These are pre-scored properties with decision-maker data.
-              </p>
-            </div>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-              <h5 className="text-xl font-bold mb-3 text-purple-400">Opportunity Mapping</h5>
-              <p className="text-gray-300">
-                We show your team exactly which streets to hit and which ones to ignore.
-              </p>
-            </div>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-              <h5 className="text-xl font-bold mb-3 text-purple-400">Priority Signals</h5>
-              <p className="text-gray-300">
-                Real-time data on asset age, owner types, and property size to pinpoint high-ticket jobs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-blue-950/20 to-black border-t border-gray-800">
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-4xl md:text-5xl font-black mb-12 text-center">
-            HOW IT WORKS: <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">THE 3-STEP TAKEOVER</span>
-          </h3>
-
-          <div className="space-y-8">
-            <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-2xl font-black">
-                1
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-2 text-blue-400">Request Your Zone</h4>
-                <p className="text-xl text-gray-300">
-                  Pick your industry and your target city.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-2xl font-black">
-                2
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-2 text-blue-400">Verify Exclusivity</h4>
-                <p className="text-xl text-gray-300">
-                  If the territory is open, we lock it to your name immediately.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 items-start">
-              <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-2xl font-black">
-                3
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-2 text-blue-400">Deploy Your Team</h4>
-                <p className="text-xl text-gray-300">
-                  Receive your monthly "Intelligence Pack" and start dominating the ground.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* One Buyer Per City Section */}
-      <section className="py-20 px-6 border-t border-gray-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-4xl md:text-5xl font-black mb-8">
-            <span className="text-red-400">ONE BUYER PER CITY</span>
-          </h3>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-            This is not for everyone. This is for the contractor with the trucks, the reps, and the hunger to be #1 in their market.
-          </p>
-
-          <p className="text-xl md:text-2xl text-gray-400 mb-12">
-            If you want to "try out" a few leads, go to Google. If you want to own the territory, stay here.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="mailto:skaplan@instinctrise.com?subject=Check Territory Availability"
-              className="group px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg text-xl font-bold hover:from-blue-500 hover:to-purple-500 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 w-full sm:w-auto"
+              Request Your Territory →
+            </Link>
+            <Link
+              href="/signup"
+              className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl border border-gray-700 bg-black/40 px-8 py-4 text-lg font-bold hover:bg-black/60 transition-all"
             >
-              CHECK AVAILABILITY →
-            </a>
+              Get Started
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-6 bg-black border-t border-gray-800">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400 mb-2">Ready to dominate your territory?</p>
-          <a
-            href="mailto:skaplan@instinctrise.com"
-            className="text-blue-400 hover:text-blue-300 font-semibold text-lg"
+      {/* How it Works Section */}
+      <section id="how" className="relative mx-auto max-w-6xl px-6 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-black">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              How It Works
+            </span>
+          </h2>
+          <p className="mt-4 text-lg text-gray-400">
+            Territory exclusivity designed for dominance.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="rounded-2xl border border-gray-800 bg-black/40 p-8">
+            <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 mb-6">
+              <span className="text-2xl font-black">1</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-3">Choose Your Territory</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Select your target ZIP code or city. Each territory is exclusive to one contractor per industry.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-gray-800 bg-black/40 p-8">
+            <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 mb-6">
+              <span className="text-2xl font-black">2</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-3">Lock Your Exclusivity</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Once claimed, your territory is protected. No other contractor in your industry can access the same area.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-gray-800 bg-black/40 p-8">
+            <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 mb-6">
+              <span className="text-2xl font-black">3</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-3">Dominate Your Market</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Access territory intelligence, demographic insights, and targeting tools to maximize revenue in your exclusive zone.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="relative mx-auto max-w-6xl px-6 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-black">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              Pricing
+            </span>
+          </h2>
+          <p className="mt-4 text-lg text-gray-400">
+            Exclusive territory protection for serious operators.
+          </p>
+        </div>
+
+        <div className="max-w-xl mx-auto">
+          <div className="rounded-3xl border-2 border-purple-600 bg-gradient-to-br from-black/60 to-gray-900/60 p-10">
+            <div className="text-center">
+              <h3 className="text-3xl font-black mb-2">Territory Exclusive</h3>
+              <div className="text-5xl font-black mt-6 mb-2">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                  Contact Us
+                </span>
+              </div>
+              <p className="text-gray-400 mb-8">Custom pricing based on territory size and market potential</p>
+
+              <ul className="text-left space-y-4 mb-10">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 text-xl">✓</span>
+                  <span className="text-gray-300">Exclusive rights to one ZIP code or city per industry</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 text-xl">✓</span>
+                  <span className="text-gray-300">Full territory demographics and market intelligence</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 text-xl">✓</span>
+                  <span className="text-gray-300">Priority access to high-value leads in your area</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-400 text-xl">✓</span>
+                  <span className="text-gray-300">Guaranteed no competitors in your territory</span>
+                </li>
+              </ul>
+
+              <Link
+                href="/request-territory"
+                className="w-full inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-lg font-bold hover:from-blue-500 hover:to-purple-500 transition-all"
+              >
+                Request Territory
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative mx-auto max-w-4xl px-6 py-20">
+        <div className="rounded-3xl border border-gray-800 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20 p-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-black mb-4">
+            Ready to Own Your Territory?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Territories are released selectively. Lock yours before it's claimed.
+          </p>
+          <Link
+            href="/request-territory"
+            className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-lg font-bold hover:from-blue-500 hover:to-purple-500 transition-all"
           >
-            skaplan@instinctrise.com
-          </a>
-          <p className="mt-4 text-sm text-gray-500">&copy; 2025 InstinctRise. Territory Intelligence Platform.</p>
+            Request Territory Now →
+          </Link>
         </div>
-      </footer>
+      </section>
     </main>
   );
 }
